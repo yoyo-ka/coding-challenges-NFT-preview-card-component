@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+    <style>
+      body {
+        background-color: hsl(217, 54%, 11%);
+        font-family: "Open Sans Condensed", sans-serif;
+        font-family: "Outfit", sans-serif;
+        font-size: 18px;
+        color: hsl(215, 51%, 70%);
+      }
+
+      section {
+        box-sizing: border-box;
+        background-color: hsl(216, 50%, 16%);
+        padding: 1em;
+        width: 20em;
+        height: 35em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 1.5em;
+        box-shadow: 0 0 2em hsl(217, 54%, 9%);
+      }
+
+      strong {
+        color: hsl(178, 100%, 50%);
+      }
+
+      hr {
+        border-color: hsl(215, 32%, 27%);
+        margin: 1.5em 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+      }
+
+      a:hover {
+        color: hsl(178, 100%, 50%);
+      }
+
+      .layer {
+        background-color: hsl(178, 100%, 50%);
+        width: 18em;
+        height: 18em;
+        border-radius: 3%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .equilibrium {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease;
+      }
+
+      .eye {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .layer:hover img.equilibrium {
+        opacity: 0.5;
+      }
+
+      .layer:hover img.eye {
+        opacity: 1;
+      }
+
+      .avatar {
+        width: 2em;
+        float: left;
+        border: solid 1px white;
+        border-radius: 1em;
+        margin-right: 1em;
+        transform: translate(0, -7px);
+      }
+
+      .timer {
+        float: right;
+      }
+
+      .timer img {
+        position: relative;
+        right: 0.2em;
+        top: 0.1em;
+      }
+
+      .eth img {
+        position: relative;
+        top: 0.1em;
+      }
+
+      .eth strong {
+        position: relative;
+        left: 0.2em;
+      }
+
+      footer {
+        font-size: 12px;
+        position: absolute;
+        bottom: 0.5em;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="layer">
+        <img
+          src="./images/image-equilibrium.jpg"
+          alt="Equilibrium"
+          class="equilibrium"
+        />
+        <img src="./SVGs/icon-view.svg" alt="" class="eye" />
+      </div>
+
+      <h1><a href="#">Equilibrium #3429</a></h1>
+
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <span class="eth">
+        <img src="./SVGs/icon-ethereum.svg" alt="" />
+        <strong>0.041 ETH</strong>
+      </span>
+
+      <span class="timer">
+        <img src="./SVGs/icon-clock.svg" alt="" />
+        <time>3 days left</time>
+      </span>
+
+      <hr />
+      <img
+        src="./images/image-avatar.png"
+        alt="Picture of Jules Wyvern"
+        class="avatar"
+      />
+      <p>Creation of <a href="#">Jules Wyvern</a></p>
+    </section>
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/yoyo-ka">yoyo-ka</a>.
+    </footer>
+  </body>
+</html>
